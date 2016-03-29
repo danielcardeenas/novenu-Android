@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:padding="6dp"
+            android:text="Feature One"/>
+
+        <TextView
+            android:id="@+id/fragment_intro_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:paddingTop="6dp"
+            android:paddingStart="26dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingEnd="26dp"
+            android:layout_marginBottom="100dp"
+            android:text="@string/lorem_ipsum" />
+
+    </LinearLayout>
+
+</LinearLayout>

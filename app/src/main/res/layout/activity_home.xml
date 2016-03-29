@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.activity.HomeActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/home_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CardViewStyle.Light"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="6dp"
+            android:layout_margin="6dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/border_bottom"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="12dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:orientation="vertical"
+                                android:padding="4dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                                    android:layout_marginTop="12dp"
+                                    android:text="5:50 PM ↓"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                                    android:layout_marginTop="2dp"
+                                    android:text="6:30 PM"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="end|bottom"
+                                    android:layout_marginTop="14dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/feed_event_type"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="bottom"
+                                        android:textColor="@color/md_yellow_800"
+                                        android:textAllCaps="true"
+                                        style="@style/Text.Caption"
+                                        android:text="Pending"/>
+
+                                    <View
+                                        android:id="@+id/feed_bullet"
+                                        android:layout_width="8dp"
+                                        android:layout_height="8dp"
+                                        android:gravity="bottom"
+                                        android:layout_marginStart="3dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:background="@drawable/calendar_circle"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:orientation="vertical"
+                                android:paddingLeft="12dp">
+
+                                <TextView
+                                    android:id="@+id/feed_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    style="@style/Text.Title"
+                                    android:layout_marginEnd="34dp"
+                                    android:text="Phoenix framework"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:layout_marginEnd="12dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Daniel Cárdenas"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="440 N Wolfe Rd, Sunnyvale, CA 94085"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/feed_btn_more"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/btn_feed_action"
+                            android:src="@drawable/ic_more_grey"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp">
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/btn_feed_action"
+                        android:src="@drawable/ic_group_grey_24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center_vertical"
+
+                        android:text="Henri Melton, Jhon Smith, Lorem Ipsum..."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/base_toolbar" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/home_tab_layout_filter"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#5be5ad"
+                app:tabTextColor="@color/md_grey_300"
+                app:tabSelectedTextColor="@color/plaid_background_light"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:tabMode="fixed" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_add_white_24dp" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
