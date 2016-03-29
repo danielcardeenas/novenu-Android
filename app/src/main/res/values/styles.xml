@@ -131,6 +131,27 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
+    <style name="Property.Title" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ACACAC</item>
+    </style>
+
+    <style name="Property.Title.Inversed" parent="Property.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Property.Definition" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Property.Definition.Inversed" parent="Property.Definition">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="Novenu.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Novenu.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="Novenu.Dark.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

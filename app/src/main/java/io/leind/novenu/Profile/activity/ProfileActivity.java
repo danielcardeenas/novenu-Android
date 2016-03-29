@@ -4,7 +4,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.content.ContextCompat;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
 import com.bumptech.glide.Glide;
 
 import butterknife.Bind;
@@ -13,10 +22,13 @@ import io.leind.novenu.Home.activity.BaseActivity;
 import io.leind.novenu.R;
 import jp.wasabeef.glide.transformations.ColorFilterTransformation;
 
-
 public class ProfileActivity extends BaseActivity {
     @Bind(R.id.profile_image) ImageView profileImage;
     @Bind(R.id.appbar) AppBarLayout appBar;
+    @Bind(R.id.profile_properties1) LinearLayout profileProperties1;
+    @Bind(R.id.profile_properties2) LinearLayout profileProperties2;
+    @Bind(R.id.profile_progress) ProgressBar progressBar;
+    @Bind(R.id.profile_eff) TextView efficiency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +38,22 @@ public class ProfileActivity extends BaseActivity {
         setTitle("");
 
         float heightDp = getResources().getDisplayMetrics().heightPixels / 3;
-        CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams)appBar.getLayoutParams();
-        lp.height = (int)heightDp * 2;
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams)appBar.getLayoutParams();
+        layoutParams.height = (int)heightDp * 2;
+
+        LinearLayout.LayoutParams frameParams1 = (LinearLayout.LayoutParams)profileProperties1.getLayoutParams();
+        frameParams1.height = (int)heightDp / 2;
+
+        LinearLayout.LayoutParams frameParams2 = (LinearLayout.LayoutParams)profileProperties2.getLayoutParams();
+        frameParams2.height = (int)heightDp / 2;
+
+        Spannable wordtoSpan = new SpannableString("92/100");
+        wordtoSpan.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorAccentDark)), 2, 6,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        efficiency.setText(wordtoSpan);
+
+        progressBar.getProgressDrawable().setColorFilter(
+                Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
 
         setUpProfileItems();
     }

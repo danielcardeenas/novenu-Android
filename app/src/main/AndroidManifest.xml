@@ -39,6 +39,7 @@
             android:name=".Profile.activity.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:parentActivityName=".Introduction.activity.IntroActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Novenu.Dark.Translucent">
 
         </activity>

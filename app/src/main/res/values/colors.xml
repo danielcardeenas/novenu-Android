@@ -4,6 +4,7 @@
     <color name="colorPrimary">#009EB7</color>
     <color name="colorPrimaryDark">#036A79</color>
     <color name="colorAccent">#4AD1B3</color>
+    <color name="colorAccentDark">#008567</color>
 
     <!-- Profile module colors -->
     <color name="profile_primary_bright">#4AD1B3</color>
